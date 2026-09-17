@@ -1,0 +1,629 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Omkar Overseas – Industrial Procurement & Strategic Sourcing</title>
+<style>
+  @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800&display=swap');
+
+  :root {
+    --bg-main:      #161616;
+    --bg-alt:       #F5F5F0;
+    --white:        #FFFFFF;
+    --accent:       #CB2727; /* Engineering Red */
+    --whatsapp:     #25D366; /* WhatsApp Brand Green */
+    --text-dark:    #1E293B;
+    --text-light:   #64748B;
+    --border-color: #E2E8F0;
+    --font-head:    'Montserrat', sans-serif;
+    --font-body:    'Inter', sans-serif;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
+  
+  body {
+    font-family: var(--font-body);
+    background-color: var(--bg-alt);
+    color: var(--text-dark);
+    line-height: 1.6;
+  }
+
+  /* Navigation Bar - Changed to sticky for iframe compatibility */
+  nav {
+    position: sticky;
+    top: 0; left: 0; right: 0;
+    background: #161616;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 5%;
+    z-index: 1000;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .nav-brand {
+    font-family: var(--font-head);
+    font-weight: 800;
+    color: #FFF;
+    font-size: 16pt;
+    letter-spacing: -0.02em;
+    line-height: 1;
+  }
+
+  .nav-brand span { color: var(--accent); }
+
+  .nav-links {
+    display: flex;
+    gap: 25px;
+    list-style: none;
+    align-items: center;
+  }
+
+  .nav-links a {
+    color: #CBD5E1;
+    text-decoration: none;
+    font-size: 8.5pt;
+    font-weight: 500;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    transition: color 0.2s;
+  }
+
+  .nav-links a:hover { color: var(--accent); }
+
+  .nav-wa-btn {
+    background: var(--whatsapp);
+    color: #FFF !important;
+    padding: 6px 12px;
+    border-radius: 2px;
+    font-weight: 600 !important;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+  }
+
+  /* Hero Section */
+  header.hero {
+    background-color: var(--bg-main);
+    color: #FFF;
+    padding: 100px 5% 80px 5%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    position: relative;
+    overflow: hidden;
+  }
+
+  header.hero::after {
+    content: '';
+    position: absolute;
+    bottom: 0; left: 0; right: 0;
+    height: 4px;
+    background: var(--accent);
+  }
+
+  .hero-container {
+    max-width: 1200px;
+    margin: 0 auto;
+    width: 100%;
+  }
+
+  .hero h1 {
+    font-family: var(--font-head);
+    font-size: clamp(28px, 4vw, 50px);
+    font-weight: 800;
+    line-height: 1.1;
+    margin-bottom: 20px;
+    letter-spacing: -0.02em;
+  }
+
+  .hero-tagline {
+    font-size: 10pt;
+    font-weight: 500;
+    color: #A3A3A3;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    margin-bottom: 20px;
+  }
+
+  .hero p {
+    font-size: 11pt;
+    color: #CBD5E1;
+    max-width: 600px;
+    margin-bottom: 30px;
+  }
+
+  .btn-primary {
+    display: inline-block;
+    background: var(--accent);
+    color: #FFF;
+    padding: 12px 28px;
+    font-size: 10pt;
+    font-weight: 600;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    border-radius: 2px;
+    transition: opacity 0.2s;
+  }
+
+  .btn-primary:hover { opacity: 0.9; }
+
+  /* Container Utilities */
+  .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 60px 5%;
+  }
+
+  section h2 {
+    font-family: var(--font-head);
+    font-size: 22pt;
+    font-weight: 800;
+    color: var(--bg-main);
+    margin-bottom: 15px;
+    letter-spacing: -0.02em;
+  }
+
+  .section-desc {
+    font-size: 10.5pt;
+    color: var(--text-light);
+    margin-bottom: 40px;
+    max-width: 700px;
+  }
+
+  /* About / Profile Grid */
+  .profile-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 50px;
+    align-items: center;
+  }
+
+  .stats-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .stat-card {
+    background: #FFF;
+    border-left: 3px solid var(--accent);
+    padding: 20px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
+  }
+
+  .stat-card .num {
+    font-family: var(--font-head);
+    font-size: 24pt;
+    font-weight: 800;
+    color: var(--bg-main);
+    line-height: 1;
+    margin-bottom: 5px;
+  }
+
+  .stat-card .lbl {
+    font-size: 8pt;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    color: var(--text-light);
+  }
+
+  /* Capabilities Grid */
+  .capabilities-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+  }
+
+  .cap-card {
+    background: var(--bg-main);
+    color: #FFF;
+    padding: 30px 25px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    border-top: 3px solid var(--accent);
+  }
+
+  .cap-card h3 {
+    font-family: var(--font-head);
+    font-size: 13pt;
+    margin-bottom: 12px;
+  }
+
+  .cap-card p {
+    font-size: 9.5pt;
+    color: #A3A3A3;
+    line-height: 1.5;
+  }
+
+  /* Product Portfolio Grid */
+  .portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+
+  .portfolio-card {
+    background: #FFF;
+    border: 1px solid var(--border-color);
+    padding: 25px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
+  }
+
+  .portfolio-card h4 {
+    font-family: var(--font-head);
+    font-size: 10.5pt;
+    font-weight: 700;
+    color: var(--bg-main);
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    margin-bottom: 12px;
+    padding-bottom: 8px;
+    border-bottom: 2px solid var(--accent);
+  }
+
+  .portfolio-card ul { list-style: none; }
+
+  .portfolio-card li {
+    font-size: 9pt;
+    color: var(--text-light);
+    padding: 5px 0;
+    border-bottom: 1px solid #F1F5F9;
+    display: flex;
+    align-items: center;
+  }
+
+  .portfolio-card li::before {
+    content: '';
+    width: 4px;
+    height: 4px;
+    background: var(--accent);
+    border-radius: 50%;
+    margin-right: 8px;
+  }
+
+  .portfolio-card li:last-child { border-bottom: none; }
+
+  /* Industries Section */
+  .industries-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 12px;
+  }
+
+  .industry-badge {
+    background: var(--bg-main);
+    color: #FFF;
+    padding: 20px 15px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 9pt;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+    display: flex;
+    align-items: center;
+    border-left: 2px solid var(--accent);
+  }
+
+  /* Inquiry Section */
+  .inquiry-section {
+    background-color: #ECECE6;
+    border-top: 1px solid #D1D5DB;
+    border-bottom: 1px solid #D1D5DB;
+  }
+
+  .inquiry-wrapper {
+    max-width: 800px;
+    margin: 0 auto;
+    background: #FFF;
+    padding: 20px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+    border-radius: 2px;
+  }
+
+  /* Footer */
+  footer {
+    background: var(--bg-main);
+    color: #FFF;
+    padding: 60px 5% 30px 5%;
+  }
+
+  .footer-grid {
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 2fr 1fr 1fr;
+    gap: 40px;
+    margin-bottom: 40px;
+  }
+
+  .footer-col h3 {
+    font-family: var(--font-head);
+    font-size: 13pt;
+    margin-bottom: 15px;
+    color: #FFF;
+  }
+
+  .footer-col p, .footer-col address {
+    font-size: 9pt;
+    color: #A3A3A3;
+    font-style: normal;
+    line-height: 1.5;
+    margin-bottom: 10px;
+  }
+
+  .footer-col a {
+    color: #CBD5E1;
+    text-decoration: none;
+    transition: color 0.2s;
+  }
+
+  .footer-col a:hover { color: var(--accent); }
+
+  .quick-contact-links {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    margin-top: 12px;
+  }
+
+  .contact-badge-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    background: rgba(255,255,255,0.06);
+    padding: 6px 10px;
+    border-radius: 2px;
+    font-size: 8.5pt;
+    font-weight: 500;
+    color: #FFF !important;
+    text-decoration: none;
+    width: fit-content;
+    border: 1px solid rgba(255,255,255,0.1);
+  }
+
+  .contact-badge-link.whatsapp { background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.3); }
+
+  .footer-bottom {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex;
+    justify-content: space-between;
+    font-size: 8pt;
+    color: #737373;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  @media(max-width: 900px) {
+    .profile-grid, .capabilities-grid, .portfolio-grid, .footer-grid {
+      grid-template-columns: 1fr;
+      gap: 25px;
+    }
+    .industries-grid { grid-template-columns: repeat(2, 1fr); }
+    .nav-links { display: none; }
+  }
+</style>
+</head>
+<body>
+
+  <!-- Navigation -->
+  <nav>
+    <div class="nav-brand">OMKAR<span>.</span> OVERSEAS</div>
+    <ul class="nav-links">
+      <li><a href="#about">About</a></li>
+      <li><a href="#capabilities">Capabilities</a></li>
+      <li><a href="#portfolio">Products</a></li>
+      <li><a href="#industries">Industries</a></li>
+      <li><a href="#inquiry">Inquire</a></li>
+      <li><a href="https://wa.me/917065511195?text=Hello%20Omkar%20Overseas,%20I%20would%20like%20to%20discuss%20an%20industrial%20procurement%20requirement." target="_blank" class="nav-wa-btn">WhatsApp Chat</a></li>
+    </ul>
+  </nav>
+
+  <!-- Hero Section -->
+  <header class="hero">
+    <div class="hero-container">
+      <div class="hero-tagline">Industrial Procurement • Strategic Sourcing • Global Supply</div>
+      <h1>Industrial Procurement.<br>Simplified.</h1>
+      <p>Omkar Overseas coordinates routine procurement, specialized component sourcing, and international compliance for manufacturers, OEMs, and EPC contractors globally.</p>
+      <a href="#inquiry" class="btn-primary">Initiate Inquiry</a>
+    </div>
+  </header>
+
+  <!-- About Section -->
+  <section id="about" class="container">
+    <h2>Built Around Industrial Supply</h2>
+    <p class="section-desc">Established supplier networks supporting domestic and international requirements through a single coordination point.</p>
+    
+    <div class="profile-grid">
+      <div>
+        <p>Omkar Overseas is an industrial procurement and strategic sourcing firm based in Delhi, India. We maintain long-standing supply agreements across core industrial clusters to supply high-reliability components.</p>
+        <p style="margin-top: 15px;">From routine plant maintenance requirements to complex build-to-print mechanical spares, we handle technical alignment, vendor qualification, inspection, and export compliance under single-point management.</p>
+      </div>
+      <div class="stats-grid">
+        <div class="stat-card">
+          <div class="num">30+</div>
+          <div class="lbl">Years Supplier Network</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">Hub</div>
+          <div class="lbl">Delhi & Sonipat Base</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">Multi</div>
+          <div class="lbl">Brand Sourcing</div>
+        </div>
+        <div class="stat-card">
+          <div class="num">Global</div>
+          <div class="lbl">Export Compliance</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Capabilities Section -->
+  <section id="capabilities" class="container" style="background: #FFFFFF;">
+    <h2>Operational Capabilities</h2>
+    <p class="section-desc">End-to-end supply chain execution designed for industrial reliability.</p>
+
+    <div class="capabilities-grid">
+      <div class="cap-card">
+        <h3>Industrial Procurement</h3>
+        <p>Efficient handling of multi-brand routine purchasing, bulk material acquisition, and scheduled plant replenishment items.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Strategic Sourcing</h3>
+        <p>Specialized locating of obsolete, hard-to-find, or custom-engineered parts through alternative qualified vendor frameworks.</p>
+      </div>
+      <div class="cap-card">
+        <h3>Global Supply & Export</h3>
+        <p>Full export documentation, freight consolidation, packaging compliance, and logistics management from Indian manufacturing centers worldwide.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- Product Portfolio -->
+  <section id="portfolio" class="container">
+    <h2>Product Portfolio</h2>
+    <p class="section-desc">Extensive sourcing coverage across primary mechanical, electrical, and fluid engineering disciplines.</p>
+
+    <div class="portfolio-grid">
+      <div class="portfolio-card">
+        <h4>Power Transmission</h4>
+        <ul>
+          <li>Precision Bearings</li>
+          <li>Industrial Chains & Sprockets</li>
+          <li>Belts & Pulleys</li>
+          <li>Heavy-duty Gearboxes</li>
+        </ul>
+      </div>
+      <div class="portfolio-card">
+        <h4>Combustion</h4>
+        <ul>
+          <li>Industrial Burners</li>
+          <li>Combustion Valves</li>
+          <li>Ignition Transformers</li>
+          <li>Burner Spares & Components</li>
+        </ul>
+      </div>
+      <div class="portfolio-card">
+        <h4>Electrical & Automation</h4>
+        <ul>
+          <li>Industrial Motors</li>
+          <li>Control Panels & Switchgear</li>
+          <li>Variable Frequency Drives (VFDs)</li>
+          <li>Industrial Cables</li>
+        </ul>
+      </div>
+      <div class="portfolio-card">
+        <h4>Fluid Power</h4>
+        <ul>
+          <li>Hydraulic Pumps & Valves</li>
+          <li>Pneumatic Cylinders</li>
+          <li>FRL Units</li>
+          <li>High-pressure Hoses & Fittings</li>
+        </ul>
+      </div>
+      <div class="portfolio-card">
+        <h4>Industrial Hardware</h4>
+        <ul>
+          <li>Specialized Fasteners</li>
+          <li>Industrial Gaskets</li>
+          <li>Process Valves & Flanges</li>
+          <li>Piping Hardware</li>
+        </ul>
+      </div>
+      <div class="portfolio-card">
+        <h4>Custom Plant Spares</h4>
+        <ul>
+          <li>Plant Maintenance Spares</li>
+          <li>Machinery Replacements</li>
+          <li>Build-to-print Engineered Parts</li>
+          <li>Process Consumables</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- Industries Supplied -->
+  <section id="industries" class="container" style="background: #FFFFFF;">
+    <h2>Industries Supplied</h2>
+    <p class="section-desc">Trusted sourcing partner for critical industrial manufacturing sectors.</p>
+
+    <div class="industries-grid">
+      <div class="industry-badge">Steel & Metals</div>
+      <div class="industry-badge">Power & Utilities</div>
+      <div class="industry-badge">Chemical & Process</div>
+      <div class="industry-badge">Automotive</div>
+      <div class="industry-badge">Textile</div>
+      <div class="industry-badge">Food Processing</div>
+      <div class="industry-badge">Battery Manufacturing</div>
+      <div class="industry-badge">Heavy Engineering</div>
+    </div>
+  </section>
+
+  <!-- Interactive Google Form Embed Section -->
+  <section id="inquiry" class="container inquiry-section">
+    <div style="text-align: center; margin-bottom: 30px;">
+      <h2>Initiate Procurement Inquiry</h2>
+      <p class="section-desc" style="margin: 0 auto;">Submit your technical requirements via our secure inquiry form below.</p>
+    </div>
+
+    <div class="inquiry-wrapper">
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeT_zWqwbAso6J0MMn8DrSRxhk12zk3uBUql3yxEaS6N3mnDw/viewform?embedded=true" width="100%" height="750" frameborder="0" marginheight="0" marginwidth="0">Loading form...</iframe>
+    </div>
+  </section>
+
+  <!-- Contact Footer -->
+  <footer id="contact">
+    <div class="footer-grid">
+      <div class="footer-col">
+        <h3>Omkar Overseas</h3>
+        <p>Strategic industrial procurement and international supply solutions. Dedicated coordination from technical evaluation to global delivery.</p>
+        <p style="margin-top: 15px; color: var(--accent); font-weight: 600;">TRUSTED • RESPONSIVE • RELIABLE</p>
+        
+        <div class="quick-contact-links">
+          <a href="https://wa.me/917065511195?text=Hello%20Omkar%20Overseas,%20I%20am%20inquiring%20from%20your%20digital%20portfolio." target="_blank" class="contact-badge-link whatsapp">
+            💬 Chat on WhatsApp
+          </a>
+        </div>
+      </div>
+
+      <div class="footer-col">
+        <h3>Head Office</h3>
+        <address>
+          1520–21, Shyam Market<br>
+          Gali Akhoonji, Farash Khana<br>
+          Delhi 110006
+        </address>
+        <h3 style="margin-top: 15px;">Rai Facility</h3>
+        <address>
+          334, HSIIDC, Industrial Area<br>
+          Rai, Sonipat<br>
+          Haryana 131029
+        </address>
+      </div>
+
+      <div class="footer-col">
+        <h3>Direct Contact</h3>
+        <p><strong>Email:</strong> <a href="mailto:omkaroverseas@outlook.com">omkaroverseas@outlook.com</a></p>
+        <p><strong>Direct Call / Mobile:</strong><br>
+          <a href="tel:+9170655111952">+91 70655 111952</a><br>
+          <a href="tel:+919811544859">+91 98115 44859</a>
+        </p>
+      </div>
+    </div>
+    <div class="footer-bottom">
+      <div>&copy; 2026 Omkar Overseas. All rights reserved.</div>
+      <div>Designed for B2B Procurement</div>
+    </div>
+  </footer>
+
+</body>
+</html>
