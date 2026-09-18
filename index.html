@@ -4,42 +4,57 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Omkar Overseas – Industrial Procurement & Strategic Sourcing</title>
-<style>  
+<meta name="description" content="Omkar Overseas is a Delhi-based industrial procurement and strategic sourcing firm serving manufacturers, OEMs, and EPC contractors with reliable component supply, technical sourcing, and global export compliance.">
+<meta property="og:title" content="Omkar Overseas – Industrial Procurement & Strategic Sourcing">
+<meta property="og:description" content="Reliable industrial procurement, strategic sourcing, and global supply for manufacturers, OEMs, and EPC contractors.">
+<meta property="og:type" content="website">
+<meta name="color-scheme" content="light only">
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'%3E%3Crect width='100' height='100' rx='16' fill='%230A1118'/%3E%3Ctext x='50' y='68' font-family='Georgia,serif' font-size='60' font-weight='700' fill='%23C8A44D' text-anchor='middle'%3EO%3C/text%3E%3C/svg%3E">
+<style>
   @import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Montserrat:wght@700;800&display=swap');
 
   :root {
-    --bg-main:      #161616;
-    --bg-alt:       #F5F5F0;
-    --white:        #FFFFFF;
-    --accent:       #CB2727; /* Engineering Red */
-    --whatsapp:     #25D366; /* WhatsApp Brand Green */
-    --text-dark:    #1E293B;
-    --text-light:   #64748B;
-    --border-color: #E2E8F0;
-    --font-head:    'Montserrat', sans-serif;
-    --font-body:    'Inter', sans-serif;
+    color-scheme: light only;
+    --navy:       #0A1118;
+    --navy-panel: #162230;
+    --gold:       #C8A44D;
+    --paper:      #F8FAFC;
+    --grey-mid:   #E2E8F0;
+    --ink:        #1E293B;
+    --ink-muted:  #64748B;
+    --whatsapp:   #25D366;
+    --font-head:  'Montserrat', sans-serif;
+    --font-body:  'Inter', sans-serif;
   }
 
-  * { box-sizing: border-box; margin: 0; padding: 0; scroll-behavior: smooth; }
-  
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
   body {
     font-family: var(--font-body);
-    background-color: var(--bg-alt);
-    color: var(--text-dark);
-    line-height: 1.6;
+    background-color: var(--paper);
+    color: var(--ink);
+    -webkit-font-smoothing: antialiased;
   }
 
-  /* Navigation Bar - Changed to sticky for iframe compatibility */
+  h1, h2, h3, h4 { font-family: var(--font-head); color: var(--navy); }
+  a { color: inherit; }
+
+  .container { max-width: 1200px; margin: 0 auto; padding: 90px 5%; }
+
+  h2 { font-size: 26pt; font-weight: 800; letter-spacing: -0.5px; margin-bottom: 12px; }
+  .section-desc { font-size: 11pt; color: var(--ink-muted); max-width: 560px; margin-bottom: 45px; line-height: 1.6; }
+
+  /* Navigation */
   nav {
     position: sticky;
     top: 0; left: 0; right: 0;
-    background: #161616;
+    background: var(--navy);
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 15px 5%;
     z-index: 1000;
-    border-bottom: 1px solid rgba(255,255,255,0.1);
+    border-bottom: 1px solid rgba(200,164,77,0.2);
   }
 
   .nav-brand {
@@ -48,18 +63,10 @@
     color: #FFF;
     font-size: 16pt;
     letter-spacing: -0.02em;
-    line-height: 1;
   }
+  .nav-brand span { color: var(--gold); }
 
-  .nav-brand span { color: var(--accent); }
-
-  .nav-links {
-    display: flex;
-    gap: 25px;
-    list-style: none;
-    align-items: center;
-  }
-
+  .nav-links { display: flex; gap: 25px; list-style: none; align-items: center; }
   .nav-links a {
     color: #CBD5E1;
     text-decoration: none;
@@ -69,12 +76,9 @@
     letter-spacing: 0.05em;
     transition: color 0.2s;
   }
+  .nav-links a:hover { color: var(--gold); }
 
-  .nav-links a:hover { color: var(--accent); }
-
-  .nav-wa-btn {
-    background: var(--whatsapp);
-    color: #FFF !important;
+  .nav-wa-btn, .nav-inquiry-btn {
     padding: 6px 12px;
     border-radius: 2px;
     font-weight: 600 !important;
@@ -82,366 +86,179 @@
     align-items: center;
     gap: 6px;
   }
+  .nav-wa-btn { background: rgba(37, 211, 102, 0.15); border: 1px solid rgba(37, 211, 102, 0.4); color: #FFF !important; }
+  .nav-wa-btn svg { width: 12px; height: 12px; stroke: var(--whatsapp); fill: none; stroke-width: 2; flex-shrink: 0; }
+  .nav-inquiry-btn { background: var(--gold); color: var(--navy) !important; }
 
-  .nav-inquiry-btn {
-    background: var(--accent);
-    color: #FFF !important;
-    padding: 6px 12px;
-    border-radius: 2px;
-    font-weight: 600 !important;
-  }
-
-  /* Hero Section */
+  /* Hero */
   header.hero {
-    background-color: var(--bg-main);
+    background-color: var(--navy);
     background-image:
-      linear-gradient(rgba(22,22,22,0.88), rgba(22,22,22,0.94)),
+      linear-gradient(rgba(10,17,24,0.88), rgba(10,17,24,0.95)),
+      url("data:image/svg+xml,%3Csvg width='40' height='40' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath d='M0 39.5h40M39.5 0v40' stroke='rgba(255,255,255,0.06)' stroke-width='1'/%3E%3C/svg%3E"),
       url('https://images.unsplash.com/photo-1606337321936-02d1b1a4d5ef?auto=format&fit=crop&w=2000&q=80');
-    background-size: cover;
+    background-size: cover, auto, cover;
     background-position: center;
     color: #FFF;
-    padding: 100px 5% 80px 5%;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    position: relative;
-    overflow: hidden;
+    padding: 140px 5% 100px 5%;
   }
 
-  header.hero::after {
-    content: '';
-    position: absolute;
-    bottom: 0; left: 0; right: 0;
-    height: 4px;
-    background: var(--accent);
-  }
-
-  .hero-container {
-    max-width: 1200px;
-    margin: 0 auto;
-    width: 100%;
-  }
-
-  .hero h1 {
-    font-family: var(--font-head);
-    font-size: clamp(28px, 4vw, 50px);
-    font-weight: 800;
-    line-height: 1.1;
-    margin-bottom: 20px;
-    letter-spacing: -0.02em;
-  }
+  .hero-container { max-width: 800px; }
 
   .hero-tagline {
+    font-family: var(--font-head);
     font-size: 10pt;
-    font-weight: 500;
-    color: #A3A3A3;
+    font-weight: 600;
+    letter-spacing: 3px;
+    color: var(--gold);
     text-transform: uppercase;
-    letter-spacing: 0.1em;
-    margin-bottom: 20px;
-  }
-
-  .hero p {
-    font-size: 11pt;
-    color: #CBD5E1;
-    max-width: 600px;
+    border-left: 3px solid var(--gold);
+    padding-left: 18px;
     margin-bottom: 30px;
   }
 
+  h1 {
+    color: #FFF;
+    font-size: 44pt;
+    font-weight: 800;
+    line-height: 1.05;
+    letter-spacing: -1px;
+    margin-bottom: 24px;
+  }
+
+  .hero-container p { font-size: 12pt; color: #CBD5E1; line-height: 1.7; max-width: 620px; margin-bottom: 35px; }
+
   .btn-primary {
     display: inline-block;
-    background: var(--accent);
-    color: #FFF;
-    padding: 12px 28px;
-    font-size: 10pt;
-    font-weight: 600;
-    text-decoration: none;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    border-radius: 2px;
-    transition: opacity 0.2s;
-  }
-
-  .btn-primary:hover { opacity: 0.9; }
-
-  /* Container Utilities */
-  .container {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding: 60px 5%;
-  }
-
-  section h2 {
+    background: var(--gold);
+    color: var(--navy);
     font-family: var(--font-head);
-    font-size: 22pt;
-    font-weight: 800;
-    color: var(--bg-main);
-    margin-bottom: 15px;
-    letter-spacing: -0.02em;
-  }
-
-  .section-desc {
-    font-size: 10.5pt;
-    color: var(--text-light);
-    margin-bottom: 40px;
-    max-width: 700px;
-  }
-
-  /* About / Profile Grid */
-  .profile-grid {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 50px;
-    align-items: center;
-  }
-
-  .stats-grid {
-    display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    gap: 20px;
-  }
-
-  .stat-card {
-    background: #FFF;
-    border-left: 3px solid var(--accent);
-    padding: 20px;
-    box-shadow: 0 4px 6px rgba(0,0,0,0.02);
-  }
-
-  .stat-card .num {
-    font-family: var(--font-head);
-    font-size: 24pt;
-    font-weight: 800;
-    color: var(--bg-main);
-    line-height: 1;
-    margin-bottom: 5px;
-  }
-
-  .stat-card .lbl {
-    font-size: 8pt;
-    font-weight: 600;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    color: var(--text-light);
-  }
-
-  /* Capabilities Grid */
-  .capabilities-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 25px;
-  }
-
-  .cap-card {
-    background: var(--bg-main);
-    color: #FFF;
-    padding: 30px 25px;
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    border-top: 3px solid var(--accent);
-  }
-
-  .cap-card h3 {
-    font-family: var(--font-head);
-    font-size: 13pt;
-    margin-bottom: 12px;
-  }
-
-  .cap-icon {
-    width: 26px;
-    height: 26px;
-    stroke: var(--accent);
-    fill: none;
-    stroke-width: 1.8;
-    margin-bottom: 14px;
-  }
-
-  .cap-card p {
+    font-weight: 700;
     font-size: 9.5pt;
-    color: #A3A3A3;
-    line-height: 1.5;
-  }
-
-  /* Product Portfolio Grid */
-  .portfolio-grid {
-    display: grid;
-    grid-template-columns: repeat(3, 1fr);
-    gap: 20px;
-  }
-
-  .portfolio-card {
-    background: #FFF;
-    border: 1px solid var(--border-color);
-    padding: 25px;
-    box-shadow: 0 2px 4px rgba(0,0,0,0.02);
-  }
-
-  .portfolio-card h4 {
-    font-family: var(--font-head);
-    font-size: 10.5pt;
-    font-weight: 700;
-    color: var(--bg-main);
+    letter-spacing: 0.5px;
     text-transform: uppercase;
-    letter-spacing: 0.05em;
-    margin-bottom: 12px;
-    padding-bottom: 8px;
-    border-bottom: 2px solid var(--accent);
-    display: flex;
-    align-items: center;
-    gap: 8px;
-  }
-
-  .portfolio-card h4 svg {
-    width: 16px;
-    height: 16px;
-    stroke: var(--accent);
-    fill: none;
-    stroke-width: 1.8;
-  }
-
-  .portfolio-card ul { list-style: none; }
-
-  .portfolio-card li {
-    font-size: 9pt;
-    color: var(--text-light);
-    padding: 5px 0;
-    border-bottom: 1px solid #F1F5F9;
-    display: flex;
-    align-items: center;
-  }
-
-  .portfolio-card li::before {
-    content: '';
-    width: 4px;
-    height: 4px;
-    background: var(--accent);
-    border-radius: 50%;
-    margin-right: 8px;
-  }
-
-  .portfolio-card li:last-child { border-bottom: none; }
-
-  /* Industries Section */
-  .industries-grid {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 12px;
-  }
-
-  .industry-badge {
-    background: var(--bg-main);
-    color: #FFF;
-    padding: 20px 15px;
-    font-family: var(--font-head);
-    font-weight: 700;
-    font-size: 9pt;
-    text-transform: uppercase;
-    letter-spacing: 0.05em;
-    display: flex;
-    align-items: center;
-    border-left: 2px solid var(--accent);
-  }
-
-  /* Inquiry Section */
-  .inquiry-section {
-    background-color: #ECECE6;
-    border-top: 1px solid #D1D5DB;
-    border-bottom: 1px solid #D1D5DB;
-  }
-
-  .inquiry-wrapper {
-    max-width: 800px;
-    margin: 0 auto;
-    background: #FFF;
-    padding: 20px;
-    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
-    border-radius: 2px;
-  }
-
-  /* Footer */
-  footer {
-    background: var(--bg-main);
-    color: #FFF;
-    padding: 60px 5% 30px 5%;
-  }
-
-  .footer-grid {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: 2fr 1fr 1fr;
-    gap: 40px;
-    margin-bottom: 40px;
-  }
-
-  .footer-col h3 {
-    font-family: var(--font-head);
-    font-size: 13pt;
-    margin-bottom: 15px;
-    color: #FFF;
-  }
-
-  .footer-col p, .footer-col address {
-    font-size: 9pt;
-    color: #A3A3A3;
-    font-style: normal;
-    line-height: 1.5;
-    margin-bottom: 10px;
-  }
-
-  .footer-col a {
-    color: #CBD5E1;
     text-decoration: none;
-    transition: color 0.2s;
+    padding: 15px 32px;
   }
 
-  .footer-col a:hover { color: var(--accent); }
+  /* About */
+  .profile-grid { display: grid; grid-template-columns: 1.3fr 1fr; gap: 50px; align-items: start; }
+  .profile-grid p { font-size: 11pt; line-height: 1.75; color: var(--ink); margin-bottom: 15px; }
 
-  .quick-contact-links {
-    display: flex;
-    flex-direction: column;
-    gap: 8px;
-    margin-top: 12px;
-  }
-
-  .contact-badge-link {
+  .credentials-strip { display: flex; flex-wrap: wrap; gap: 10px; margin-top: 25px; }
+  .credential-badge {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    background: rgba(255,255,255,0.06);
-    padding: 6px 10px;
-    border-radius: 2px;
-    font-size: 8.5pt;
-    font-weight: 500;
-    color: #FFF !important;
-    text-decoration: none;
-    width: fit-content;
-    border: 1px solid rgba(255,255,255,0.1);
-  }
-
-  .contact-badge-link.whatsapp { background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.3); }
-
-  .footer-bottom {
-    max-width: 1200px;
-    margin: 0 auto;
-    padding-top: 20px;
-    border-top: 1px solid rgba(255,255,255,0.1);
-    display: flex;
-    justify-content: space-between;
+    gap: 7px;
+    background: #FFF;
+    border: 1px solid var(--grey-mid);
+    padding: 8px 13px;
     font-size: 8pt;
-    color: #737373;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.04em;
+    color: var(--ink);
+  }
+  .credential-badge svg { width: 13px; height: 13px; stroke: var(--gold); fill: none; stroke-width: 2; flex-shrink: 0; }
+
+  .stats-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 20px; }
+  .stat-card { background: #FFF; border-left: 3px solid var(--gold); padding: 22px; }
+  .stat-card .num { font-size: 26pt; font-weight: 800; color: var(--navy); line-height: 1; margin-bottom: 6px; font-family: var(--font-head); }
+  .stat-card .lbl { font-size: 8pt; font-weight: 600; text-transform: uppercase; letter-spacing: 0.05em; color: var(--ink-muted); }
+
+  /* Capabilities */
+  .capabilities-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 25px; }
+  .cap-card { background: var(--navy); padding: 32px 28px; }
+  .cap-icon { width: 28px; height: 28px; stroke: var(--gold); fill: none; stroke-width: 1.6; margin-bottom: 18px; }
+  .cap-card h3 { color: #FFF; font-size: 13pt; margin-bottom: 12px; }
+  .cap-card p { color: #B8C2CC; font-size: 10pt; line-height: 1.6; }
+
+  /* Portfolio */
+  .portfolio-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 18px; }
+  .portfolio-card { border: 1px solid var(--grey-mid); padding: 22px 26px; background: #FFF; }
+  .portfolio-card h4 {
+    font-size: 11pt; font-weight: 700; color: var(--navy);
+    text-transform: uppercase; letter-spacing: 0.04em;
+    margin-bottom: 14px; padding-bottom: 12px;
+    border-bottom: 2px solid var(--gold);
+    display: flex; align-items: center; gap: 9px;
+  }
+  .portfolio-card h4 svg { width: 17px; height: 17px; stroke: var(--gold); fill: none; stroke-width: 1.8; }
+  .portfolio-card ul { list-style: none; }
+  .portfolio-card li { font-size: 9.5pt; color: var(--ink-muted); padding: 5px 0; display: flex; align-items: center; }
+  .portfolio-card li::before { content: ''; width: 4px; height: 4px; background: var(--gold); border-radius: 50%; margin-right: 10px; flex-shrink: 0; }
+
+  /* Industries */
+  .industries-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2px; background: var(--grey-mid); }
+  .industry-badge {
+    background: var(--navy);
+    color: #FFF;
+    padding: 24px 16px;
+    font-family: var(--font-head);
+    font-weight: 700;
+    font-size: 9pt;
     text-transform: uppercase;
     letter-spacing: 0.05em;
+    border-left: 2px solid var(--gold);
+    display: flex; align-items: center;
+    transition: background 0.2s, padding-left 0.2s;
+  }
+  .industry-badge:hover { background: var(--navy-panel); padding-left: 22px; }
+
+  /* Inquiry */
+  .inquiry-section { background: var(--navy-panel); }
+  .inquiry-section h2, .inquiry-section .section-desc { color: #FFF; }
+  .inquiry-section .section-desc { color: #B8C2CC; }
+  .inquiry-wrapper { background: #FFF; padding: 4px; max-width: 760px; margin: 0 auto; border-top: 3px solid var(--gold); }
+  .inquiry-wrapper iframe { display: block; width: 100%; border: none; }
+
+  /* Footer */
+  footer { background: var(--navy); color: #FFF; padding: 60px 5% 30px 5%; }
+  .footer-grid { max-width: 1200px; margin: 0 auto; display: grid; grid-template-columns: 2fr 1fr 1fr; gap: 40px; margin-bottom: 40px; }
+  .footer-col h3 { font-size: 13pt; margin-bottom: 15px; color: #FFF; }
+  .footer-col p, .footer-col address { font-size: 9pt; color: #A3A3A3; font-style: normal; line-height: 1.5; margin-bottom: 10px; }
+  .footer-col a { color: #CBD5E1; text-decoration: none; transition: color 0.2s; }
+  .footer-col a:hover { color: var(--gold); }
+
+  .contact-field { margin-bottom: 16px; }
+  .contact-field:last-child { margin-bottom: 0; }
+  .contact-label {
+    display: block; font-family: var(--font-head); font-size: 7.5pt; font-weight: 600;
+    color: var(--gold); text-transform: uppercase; letter-spacing: 0.08em; margin-bottom: 4px;
+  }
+
+  .quick-contact-links { display: flex; flex-direction: column; gap: 8px; margin-top: 12px; }
+  .contact-badge-link {
+    display: inline-flex; align-items: center; gap: 8px;
+    background: rgba(255,255,255,0.06); padding: 6px 10px; border-radius: 2px;
+    font-size: 8.5pt; font-weight: 500; color: #FFF !important; text-decoration: none;
+    width: fit-content; border: 1px solid rgba(255,255,255,0.1);
+  }
+  .contact-badge-link.whatsapp { background: rgba(37, 211, 102, 0.15); border-color: rgba(37, 211, 102, 0.3); }
+  .contact-badge-link svg { width: 12px; height: 12px; stroke: var(--whatsapp); fill: none; stroke-width: 2; flex-shrink: 0; }
+
+  .footer-bottom {
+    max-width: 1200px; margin: 0 auto; padding-top: 20px;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    display: flex; justify-content: space-between;
+    font-size: 8pt; color: #737373; text-transform: uppercase; letter-spacing: 0.05em;
   }
 
   @media(max-width: 900px) {
-    .profile-grid, .capabilities-grid, .portfolio-grid, .footer-grid {
-      grid-template-columns: 1fr;
-      gap: 25px;
-    }
+    .profile-grid, .capabilities-grid, .portfolio-grid, .footer-grid { grid-template-columns: 1fr; gap: 25px; }
     .industries-grid { grid-template-columns: repeat(2, 1fr); }
     .nav-links li:not(.nav-cta-item) { display: none; }
-    .nav-links { gap: 8px; }
+    nav { flex-wrap: wrap; row-gap: 10px; padding: 12px 5%; }
+    .nav-brand { font-size: 13pt; }
+    .nav-links { gap: 8px; width: 100%; justify-content: flex-end; }
+    .nav-wa-btn, .nav-inquiry-btn { padding: 8px 10px; font-size: 8pt; }
+    h1 { font-size: 28pt; }
+  }
+
+  @media(max-width: 400px) {
+    .nav-links { justify-content: center; }
+    .nav-cta-item { flex: 1; }
+    .nav-wa-btn, .nav-inquiry-btn { display: block; text-align: center; }
   }
 </style>
 </head>
@@ -456,11 +273,11 @@
       <li><a href="#portfolio">Products</a></li>
       <li><a href="#industries">Industries</a></li>
       <li class="nav-cta-item"><a href="#inquiry" class="nav-inquiry-btn">Send Inquiry</a></li>
-      <li class="nav-cta-item"><a href="https://wa.me/917065511952?text=Hello%20Omkar%20Overseas,%20I%20would%20like%20to%20discuss%20an%20industrial%20procurement%20requirement." target="_blank" class="nav-wa-btn">WhatsApp Chat</a></li>
+      <li class="nav-cta-item"><a href="https://wa.me/917065511952?text=Hello%20Omkar%20Overseas,%20I%20would%20like%20to%20discuss%20an%20industrial%20procurement%20requirement." target="_blank" class="nav-wa-btn"><svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>WhatsApp Chat</a></li>
     </ul>
   </nav>
 
-  <!-- Hero Section -->
+  <!-- Hero -->
   <header class="hero">
     <div class="hero-container">
       <div class="hero-tagline">Industrial Procurement • Strategic Sourcing • Global Supply</div>
@@ -470,71 +287,50 @@
     </div>
   </header>
 
-  <!-- About Section -->
+  <!-- About -->
   <section id="about" class="container">
     <h2>Built Around Industrial Supply</h2>
     <p class="section-desc">Established supplier networks supporting domestic and international requirements through a single coordination point.</p>
-    
+
     <div class="profile-grid">
       <div>
-        <p>Omkar Overseas is an industrial procurement and strategic sourcing firm based in Delhi, India, built on supplier relationships developed over 30+ years. We maintain long-standing supply agreements across core industrial clusters to supply high-reliability components.</p>
-        <p style="margin-top: 15px;">From routine plant maintenance requirements to complex build-to-print mechanical spares, we handle technical alignment, vendor qualification, inspection, and export compliance under single-point management. Omkar Overseas is a licensed importer-exporter, holding a valid Import Export Code (IEC).</p>
+        <p>Omkar Overseas draws on supplier relationships developed over 30+ years, with international export operations formalised in 2022. We maintain long-standing supply agreements across core industrial clusters to supply high-reliability components.</p>
+        <p>From routine plant maintenance requirements to complex build-to-print mechanical spares, we handle technical alignment, vendor qualification, inspection, and export compliance under single-point management. Omkar Overseas is a licensed importer-exporter, holding a valid Import Export Code (IEC).</p>
+
+        <div class="credentials-strip">
+          <span class="credential-badge"><svg viewBox="0 0 24 24"><path d="M3 21h18M5 21V7l7-4 7 4v14M9 9h1m4 0h1m-6 4h1m4 0h1m-6 4h1m4 0h1"/></svg>Delhi & Sonipat Hub</span>
+          <span class="credential-badge"><svg viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>Multi-Brand Sourcing</span>
+          <span class="credential-badge"><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>Global Export Compliance</span>
+          <span class="credential-badge"><svg viewBox="0 0 24 24"><path d="M9 12l2 2 4-4"/><circle cx="12" cy="12" r="10"/></svg>IEC Licensed Importer-Exporter</span>
+        </div>
       </div>
       <div class="stats-grid">
-        <div class="stat-card">
-          <div class="num">30+</div>
-          <div class="lbl">Years Supplier Network</div>
-        </div>
-        <div class="stat-card">
-          <div class="num">2022</div>
-          <div class="lbl">Company Established</div>
-        </div>
-        <div class="stat-card">
-          <div class="num">Hub</div>
-          <div class="lbl">Delhi & Sonipat Base</div>
-        </div>
-        <div class="stat-card">
-          <div class="num">Multi</div>
-          <div class="lbl">Brand Sourcing</div>
-        </div>
-        <div class="stat-card">
-          <div class="num">Global</div>
-          <div class="lbl">Export Compliance</div>
-        </div>
-        <div class="stat-card">
-          <div class="num">IEC</div>
-          <div class="lbl">Licensed Importer-Exporter</div>
-        </div>
+        <div class="stat-card"><div class="num">30+</div><div class="lbl">Years Supplier Network</div></div>
+        <div class="stat-card"><div class="num">2022</div><div class="lbl">Export Operations Launched</div></div>
       </div>
     </div>
   </section>
 
-  <!-- Capabilities Section -->
+  <!-- Capabilities -->
   <section id="capabilities" class="container" style="background: #FFFFFF;">
     <h2>Operational Capabilities</h2>
     <p class="section-desc">End-to-end supply chain execution designed for industrial reliability.</p>
 
     <div class="capabilities-grid">
       <div class="cap-card">
-        <div>
         <svg class="cap-icon" viewBox="0 0 24 24"><path d="M21 8V21H3V8"/><path d="M1 3h22v5H1z"/><path d="M10 12h4"/></svg>
         <h3>Industrial Procurement</h3>
         <p>Efficient handling of multi-brand routine purchasing, bulk material acquisition, and scheduled plant replenishment items.</p>
-        </div>
       </div>
       <div class="cap-card">
-        <div>
         <svg class="cap-icon" viewBox="0 0 24 24"><circle cx="11" cy="11" r="8"/><line x1="21" y1="21" x2="16.65" y2="16.65"/></svg>
         <h3>Strategic Sourcing</h3>
         <p>Specialised locating of obsolete, hard-to-find, or custom-engineered parts through alternative qualified vendor frameworks.</p>
-        </div>
       </div>
       <div class="cap-card">
-        <div>
         <svg class="cap-icon" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><line x1="2" y1="12" x2="22" y2="12"/><path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"/></svg>
         <h3>Global Supply & Export</h3>
-        <p>Full export documentation, freight consolidation, packaging compliance, and logistics management from Indian manufacturing centers worldwide.</p>
-        </div>
+        <p>Full export documentation, freight consolidation, packaging compliance, and logistics management from Indian manufacturing centres worldwide.</p>
       </div>
     </div>
   </section>
@@ -547,62 +343,32 @@
     <div class="portfolio-grid">
       <div class="portfolio-card">
         <h4><svg viewBox="0 0 24 24"><circle cx="12" cy="12" r="3"/><path d="M19.4 15a1.65 1.65 0 0 0 .33 1.82l.06.06a2 2 0 1 1-2.83 2.83l-.06-.06a1.65 1.65 0 0 0-1.82-.33 1.65 1.65 0 0 0-1 1.51V21a2 2 0 0 1-4 0v-.09A1.65 1.65 0 0 0 9 19.4a1.65 1.65 0 0 0-1.82.33l-.06.06a2 2 0 1 1-2.83-2.83l.06-.06a1.65 1.65 0 0 0 .33-1.82 1.65 1.65 0 0 0-1.51-1H3a2 2 0 0 1 0-4h.09A1.65 1.65 0 0 0 4.6 9a1.65 1.65 0 0 0-.33-1.82l-.06-.06a2 2 0 1 1 2.83-2.83l.06.06a1.65 1.65 0 0 0 1.82.33H9a1.65 1.65 0 0 0 1-1.51V3a2 2 0 0 1 4 0v.09a1.65 1.65 0 0 0 1 1.51 1.65 1.65 0 0 0 1.82-.33l.06-.06a2 2 0 1 1 2.83 2.83l-.06.06a1.65 1.65 0 0 0-.33 1.82V9a1.65 1.65 0 0 0 1.51 1H21a2 2 0 0 1 0 4h-.09a1.65 1.65 0 0 0-1.51 1z"/></svg>Power Transmission</h4>
-        <ul>
-          <li>Precision Bearings</li>
-          <li>Industrial Chains & Sprockets</li>
-          <li>Belts & Pulleys</li>
-          <li>Heavy-duty Gearboxes</li>
-        </ul>
+        <ul><li>Precision Bearings</li><li>Industrial Chains & Sprockets</li><li>Belts & Pulleys</li><li>Heavy-duty Gearboxes</li></ul>
       </div>
       <div class="portfolio-card">
         <h4><svg viewBox="0 0 24 24"><path d="M8.5 14.5A2.5 2.5 0 0 0 11 12c0-1.38-.5-2-1-3-1.072-2.143-.224-4.054 2-6 .5 2.5 2 4.9 4 6.5 2 1.6 3 3.5 3 5.5a7 7 0 1 1-14 0c0-1.153.433-2.294 1-3a2.5 2.5 0 0 0 2.5 2.5z"/></svg>Combustion</h4>
-        <ul>
-          <li>Industrial Burners</li>
-          <li>Combustion Valves</li>
-          <li>Ignition Transformers</li>
-          <li>Burner Spares & Components</li>
-        </ul>
+        <ul><li>Industrial Burners</li><li>Combustion Valves</li><li>Ignition Transformers</li><li>Burner Spares & Components</li></ul>
       </div>
       <div class="portfolio-card">
         <h4><svg viewBox="0 0 24 24"><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/></svg>Electrical & Automation</h4>
-        <ul>
-          <li>Industrial Motors</li>
-          <li>Control Panels & Switchgear</li>
-          <li>Variable Frequency Drives (VFDs)</li>
-          <li>Industrial Cables</li>
-        </ul>
+        <ul><li>Industrial Motors</li><li>Control Panels & Switchgear</li><li>Variable Frequency Drives (VFDs)</li><li>Industrial Cables</li></ul>
       </div>
       <div class="portfolio-card">
         <h4><svg viewBox="0 0 24 24"><path d="M12 2.69s-5.5 6.36-5.5 10.31a5.5 5.5 0 0 0 11 0c0-3.95-5.5-10.31-5.5-10.31z"/></svg>Fluid Power</h4>
-        <ul>
-          <li>Hydraulic Pumps & Valves</li>
-          <li>Pneumatic Cylinders</li>
-          <li>FRL Units</li>
-          <li>High-pressure Hoses & Fittings</li>
-        </ul>
+        <ul><li>Hydraulic Pumps & Valves</li><li>Pneumatic Cylinders</li><li>FRL Units</li><li>High-pressure Hoses & Fittings</li></ul>
       </div>
       <div class="portfolio-card">
         <h4><svg viewBox="0 0 24 24"><polygon points="12 2 20 7 20 17 12 22 4 17 4 7"/><circle cx="12" cy="12" r="3"/></svg>Industrial Hardware</h4>
-        <ul>
-          <li>Specialised Fasteners</li>
-          <li>Industrial Gaskets</li>
-          <li>Process Valves & Flanges</li>
-          <li>Piping Hardware</li>
-        </ul>
+        <ul><li>Specialised Fasteners</li><li>Industrial Gaskets</li><li>Process Valves & Flanges</li><li>Piping Hardware</li></ul>
       </div>
       <div class="portfolio-card">
         <h4><svg viewBox="0 0 24 24"><path d="M14.7 6.3a1 1 0 0 0 0 1.4l1.6 1.6a1 1 0 0 0 1.4 0l3.77-3.77a6 6 0 0 1-7.94 7.94l-6.91 6.91a2.12 2.12 0 0 1-3-3l6.91-6.91a6 6 0 0 1 7.94-7.94l-3.76 3.76z"/></svg>Custom Plant Spares</h4>
-        <ul>
-          <li>Plant Maintenance Spares</li>
-          <li>Machinery Replacements</li>
-          <li>Build-to-print Engineered Parts</li>
-          <li>Process Consumables</li>
-        </ul>
+        <ul><li>Plant Maintenance Spares</li><li>Machinery Replacements</li><li>Build-to-print Engineered Parts</li><li>Process Consumables</li></ul>
       </div>
     </div>
   </section>
 
-  <!-- Industries Supplied -->
+  <!-- Industries -->
   <section id="industries" class="container" style="background: #FFFFFF;">
     <h2>Industries Supplied</h2>
     <p class="section-desc">Trusted sourcing partner for critical industrial manufacturing sectors.</p>
@@ -619,60 +385,54 @@
     </div>
   </section>
 
-  <!-- Interactive Google Form Embed Section -->
+  <!-- Inquiry -->
   <section id="inquiry" class="container inquiry-section">
     <div style="text-align: center; margin-bottom: 30px;">
       <h2>Initiate Procurement Inquiry</h2>
-      <p class="section-desc" style="margin: 0 auto;">Submit your technical requirements via our secure inquiry form below.</p>
+      <p class="section-desc" style="margin: 0 auto;">Submit your technical requirements via the inquiry form below.</p>
     </div>
-
     <div class="inquiry-wrapper">
-      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeT_zWqwbAso6J0MMn8DrSRxhk12zk3uBUql3yxEaS6N3mnDw/viewform?embedded=true" width="100%" height="1125" frameborder="0" marginheight="0" marginwidth="0">Loading form...</iframe>
+      <iframe src="https://docs.google.com/forms/d/e/1FAIpQLSeT_zWqwbAso6J0MMn8DrSRxhk12zk3uBUql3yxEaS6N3mnDw/viewform?embedded=true" width="100%" height="1175" frameborder="0" marginheight="0" marginwidth="0">Loading form...</iframe>
     </div>
   </section>
 
-  <!-- Contact Footer -->
+  <!-- Footer -->
   <footer id="contact">
     <div class="footer-grid">
       <div class="footer-col">
         <h3>Omkar Overseas</h3>
         <p>Strategic industrial procurement and international supply solutions. Dedicated coordination from technical evaluation to global delivery.</p>
-        <p style="margin-top: 15px; color: var(--accent); font-weight: 600;">TRUSTED • RESPONSIVE • RELIABLE</p>
-        
+        <p style="margin-top: 15px; color: var(--gold); font-weight: 600;">TRUSTED • RESPONSIVE • RELIABLE</p>
         <div class="quick-contact-links">
           <a href="https://wa.me/917065511952?text=Hello%20Omkar%20Overseas,%20I%20am%20inquiring%20from%20your%20digital%20portfolio." target="_blank" class="contact-badge-link whatsapp">
-            💬 Chat on WhatsApp
+            <svg viewBox="0 0 24 24"><path d="M21 11.5a8.38 8.38 0 0 1-.9 3.8 8.5 8.5 0 0 1-7.6 4.7 8.38 8.38 0 0 1-3.8-.9L3 21l1.9-5.7a8.38 8.38 0 0 1-.9-3.8 8.5 8.5 0 0 1 4.7-7.6 8.38 8.38 0 0 1 3.8-.9h.5a8.48 8.48 0 0 1 8 8v.5z"/></svg>Chat on WhatsApp
           </a>
         </div>
       </div>
 
       <div class="footer-col">
         <h3>Head Office</h3>
-        <address>
-          1520–21, Shyam Market<br>
-          Gali Akhoonji, Farash Khana<br>
-          Delhi 110006
-        </address>
+        <address>1520–21, Shyam Market<br>Gali Akhoonji, Farash Khana<br>Delhi 110006</address>
         <h3 style="margin-top: 15px;">Rai Facility</h3>
-        <address>
-          334, HSIIDC, Industrial Area<br>
-          Rai, Sonipat<br>
-          Haryana 131029
-        </address>
+        <address>334, HSIIDC, Industrial Area<br>Rai, Sonipat<br>Haryana 131029</address>
       </div>
 
       <div class="footer-col">
         <h3>Contact</h3>
-        <p><strong>Email:</strong> <a href="mailto:omkaroverseas@outlook.com">omkaroverseas@outlook.com</a></p>
-        <p><strong>Call / Mobile:</strong><br>
+        <div class="contact-field">
+          <span class="contact-label">Email</span>
+          <a href="mailto:omkaroverseas@outlook.com">omkaroverseas@outlook.com</a>
+        </div>
+        <div class="contact-field">
+          <span class="contact-label">Phone</span>
           <a href="tel:+917065511952">+91 70655 11952</a><br>
           <a href="tel:+919811544859">+91 98115 44859</a>
-        </p>
+        </div>
       </div>
     </div>
     <div class="footer-bottom">
-      <div>&copy; 2022 Omkar Overseas. All rights reserved.</div>
-      <div>Designed for B2B Procurement</div>
+      <div>&copy; 2026 Omkar Overseas. All rights reserved.</div>
+      <div>Industrial Procurement • Strategic Sourcing • Global Supply</div>
     </div>
   </footer>
 
